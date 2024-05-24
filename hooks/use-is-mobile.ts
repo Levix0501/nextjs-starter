@@ -1,4 +1,4 @@
-import { useMediaQuery } from './use-media-query';
+import { useMediaQuery } from 'usehooks-ts';
 
 export function useIsMobile() {
   return useMediaQuery('(max-width:639px)');
