@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import '../styles/globals.css';
 import GoogleAnalytics from '@/components/google-analytics';
 import { siteConfig } from '@/site-config';
+import { NprogressProvider } from '@/components/providers/nprogress-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -30,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NprogressProvider>{children}</NprogressProvider>
+      </body>
       <GoogleAnalytics />
     </html>
   );
